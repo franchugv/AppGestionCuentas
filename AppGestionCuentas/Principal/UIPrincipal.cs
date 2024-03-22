@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace AppGestionCuentas.Principal
 {
-    public enum MenuPrincipal : byte { Salir, AgregarCuenta, EliminarCuenta, ModificarCuenta, ConsultarCuenta }
+    public enum MenuPrincipal : byte { Salir, AgregarCuenta, EliminarCuenta, 
+        ModificarCuenta, ConsultarCuenta, CargarPrueba }
 
     /// <summary>
     /// Clase que proporciona los métodos de interacción de la Interfaz Principal
@@ -22,6 +23,7 @@ namespace AppGestionCuentas.Principal
             Console.WriteLine("\t2- Eliminar Cuentas");
             Console.WriteLine("\t3- Modificar Cuentas");
             Console.WriteLine("\t4- Consultar Cuentas");
+            Console.WriteLine("\t5- Cargar Datos de Prueba");
             Console.WriteLine("Seleccione Opción: ");
 
         }

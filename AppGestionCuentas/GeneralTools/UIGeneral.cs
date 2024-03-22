@@ -19,6 +19,8 @@ namespace AppGestionCuentas.GeneralTools
         /// <returns>Opción del Menú</returns>
         /// <exception cref="ArgumentNullException">No se ha introducido nada</exception>
         /// <exception cref="OverflowException">Opción fuera de rango</exception>
+        /// <exception cref="FormatException">Opción no es un valor numérico</exception>
+
         public static byte CaptarOpcion(byte numElementos)
         {
             // Recursos Locales
@@ -46,6 +48,17 @@ namespace AppGestionCuentas.GeneralTools
                 throw new OverflowException();
 
             return opcion;
+        }
+
+        /// <summary>
+        /// Mostrar Errores
+        /// </summary>
+        /// <param name="mError"></param>
+        public static void MostrarError(string mError)
+        {
+            Console.WriteLine($"ERROR: {mError}");
+            Console.WriteLine("Pulse Enter para continuar");
+            Console.ReadLine();
         }
 
     }

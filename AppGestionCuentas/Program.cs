@@ -129,7 +129,6 @@ namespace AppGestionCuentas
             lista.Add(NuevaCuenta);
             NuevaCuenta = new CuentaPlatino("Marino", 254800, new DateTime(1980, 3, 3), "00000000000000000012");
             lista.Add(NuevaCuenta);
-
         }
     }
 }

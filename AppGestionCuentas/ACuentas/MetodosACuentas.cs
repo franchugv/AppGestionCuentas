@@ -1,4 +1,5 @@
-﻿using R24_JesusCG_V1;
+﻿using AppGestionCuentas.GeneralTools;
+using R24_JesusCG_V1;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -55,32 +56,31 @@ namespace AppGestionCuentas.ACuentas
             Console.Write("Escriba su nombre: ");
             nombre = Console.ReadLine();
 
-            Pausa();
+            UIGeneral.Pausa();
 
             Console.Write("Especifique el ingreso: ");
             aux = Console.ReadLine();
             ingreso = Convert.ToSingle(aux);
 
-            Pausa();
+            UIGeneral.Pausa();
+
 
             Console.Write("Escriba su fecha de nacimiento: ");
             aux = Console.ReadLine();
             FechaNacimiento = Convert.ToDateTime(aux);
 
-            Pausa();
+            UIGeneral.Pausa();
+
 
             Console.Write("Escriba su Nº Cuenta: ");
             n_cuenta = Console.ReadLine();
 
-            Pausa();
+            UIGeneral.Pausa();
+
 
         }
 
 
-        public static void Pausa()
-        {
-            Console.Write("Pulse Enter para continuar...");
-            Console.ReadLine();
-        }
+
     }
 }

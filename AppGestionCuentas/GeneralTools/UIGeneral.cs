@@ -1,4 +1,5 @@
 ﻿using AppGestionCuentas.ACuentas;
+using R24_JesusCG_V1;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -59,6 +60,18 @@ namespace AppGestionCuentas.GeneralTools
             Console.WriteLine($"ERROR: {mError}");
             Console.WriteLine("Pulse Enter para continuar");
             Console.ReadLine();
+        }
+
+        public static void Pausa()
+        {
+            Console.Write("Pulse Enter para continuar...");
+            Console.ReadLine();
+            Console.Clear();
+        }
+
+        public static void MostrarCuentas(List <Cuenta> ListaCuenta)
+        {
+            Console.WriteLine(ListaCuenta);
         }
 
     }

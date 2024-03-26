@@ -1,5 +1,6 @@
 ﻿
 using AppGestionCuentas.ACuentas;
+using AppGestionCuentas.DelCuentas;
 using AppGestionCuentas.GeneralTools;
 using AppGestionCuentas.Principal;
 using R24_JesusCG_V1;
@@ -44,6 +45,8 @@ namespace AppGestionCuentas
                         // Eliminar Cuentas Bancarias
                         case MenuPrincipal.EliminarCuenta: // Eliminar Cuentas
                                                            // TODO: Llamada al subcontrolador - Eliminar
+                            ControladorDelCuentas.ControladorDelCuenta(listaCuentas);
+                            
                             break;
                         // Modificar Cuentas Bancarias
                         case MenuPrincipal.ModificarCuenta: // Modificar Cuentas

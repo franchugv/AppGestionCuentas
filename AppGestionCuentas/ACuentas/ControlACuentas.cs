@@ -19,6 +19,7 @@ namespace AppGestionCuentas.ACuentas
         {
             MenuACuentas opcion = MenuACuentas.Salir;
 
+
             // TODO: Implementación del controlador para la adición de cuentas
             do
             {
@@ -31,10 +32,13 @@ namespace AppGestionCuentas.ACuentas
                     case MenuACuentas.Salir:
                         break;
                     case MenuACuentas.CuentaJoven:
+                        ACuentas.MetodosACuentas.AgregarCuentaJoven(listaCuentas);
                         break;
                     case MenuACuentas.CuentaOro:
+                        ACuentas.MetodosACuentas.AgregarCuentaOro(listaCuentas);
                         break;
                     case MenuACuentas.CuentaPlatino:
+                        ACuentas.MetodosACuentas.AgregarCuentaPlatino(listaCuentas);
                         break;
                 }
 

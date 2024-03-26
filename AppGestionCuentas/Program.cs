@@ -3,6 +3,7 @@ using AppGestionCuentas.ACuentas;
 using AppGestionCuentas.GeneralTools;
 using AppGestionCuentas.Principal;
 using R24_JesusCG_V1;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace AppGestionCuentas
 {

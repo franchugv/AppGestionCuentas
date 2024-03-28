@@ -73,5 +73,24 @@ namespace AppGestionCuentas.GeneralTools
             Console.WriteLine($"Nº de opciones a escoger: ({ListaCuenta.ToArray().Length})\n");
         }
 
+        public static byte SelectorOpcion()
+        {
+            // RECURSOS
+
+            byte opcion = 0; // Opción a elegir por el usuario
+            string aux = "";
+
+            // ENTRADA
+
+            aux = Console.ReadLine();
+
+            opcion = Convert.ToByte(aux);
+
+            return (byte)(opcion - 1);
+
+
+        }
+
+
     }
 }

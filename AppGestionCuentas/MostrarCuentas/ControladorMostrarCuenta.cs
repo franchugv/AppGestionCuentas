@@ -18,9 +18,7 @@ namespace AppGestionCuentas.MostrarCuentas
 
             UIMostrarCuentas.MenuMostrar(ListaCuenta);
 
-            aux = Console.ReadLine();
-
-            opcion = Convert.ToByte(aux);
+            opcion = UIGeneral.SelectorOpcion();      
 
             UIMostrarCuentas.MostrarCuenta(ListaCuenta, opcion);
 

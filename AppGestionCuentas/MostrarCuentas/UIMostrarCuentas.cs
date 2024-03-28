@@ -13,6 +13,7 @@ namespace AppGestionCuentas.MostrarCuentas
         // Opción que ha de ser elegida por el usuario
         public static void MenuMostrar(List<Cuenta> ListaCuenta)
         {
+            Console.Clear();
 
             UIGeneral.NumOpcionesLista(ListaCuenta);
 

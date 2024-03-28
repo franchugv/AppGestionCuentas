@@ -24,7 +24,7 @@ namespace AppGestionCuentas.Principal
             Console.WriteLine("\t3- Modificar Cuentas");
             Console.WriteLine("\t4- Consultar Cuentas");
             Console.WriteLine("\t5- Cargar Datos de Prueba");
-            Console.WriteLine("Seleccione Opción: ");
+            Console.Write("\nSeleccione Opción: ");
 
         }
 

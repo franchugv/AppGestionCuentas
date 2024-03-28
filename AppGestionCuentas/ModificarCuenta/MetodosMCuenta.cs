@@ -13,23 +13,6 @@ namespace AppGestionCuentas.ModificarCuenta
     public static class MetodosMCuenta
     {
 
-        public static byte ElegirCuentaAModificar()
-        {
-            // RECURSOS
-
-            byte opcion = 0; // Opción a elegir por el usuario
-            string aux = "";
-
-            // ENTRADA
-
-            aux = Console.ReadLine();
-
-            opcion = Convert.ToByte(aux);
-
-            return opcion;
-
-
-        }
 
         public static void ModificaciónCuenta(List<Cuenta> ListaCuentas)
         {
@@ -41,12 +24,12 @@ namespace AppGestionCuentas.ModificarCuenta
             bool esValido;
             byte opcion;
 
-            opcion = ElegirCuentaAModificar();
+            opcion = UIGeneral.SelectorOpcion();
 
             esValido = ElegirModificar("el titular");
             if (esValido == true)
             {
-                Console.Write("Escriba el nuevo titular: \n");
+                Console.Write("Escriba el nuevo titular: ");
                 cadena = Console.ReadLine();
                 ListaCuentas[opcion].Titular = cadena;
             }
@@ -54,7 +37,7 @@ namespace AppGestionCuentas.ModificarCuenta
             esValido = ElegirModificar("el Nº Cuenta");
             if (esValido == true)
             {
-                Console.Write("Escriba el nuevo Nº Cuenta: \n");
+                Console.Write("Escriba el nuevo Nº Cuenta: ");
                 cadena = Console.ReadLine();
                 ListaCuentas[opcion].NumCuenta = cadena;
             }
@@ -62,7 +45,7 @@ namespace AppGestionCuentas.ModificarCuenta
             esValido = ElegirModificar("la cantidad");
             if (esValido == true)
             {
-                Console.Write("Especifique la nueva cantidad: \n");
+                Console.Write("Especifique la nueva cantidad: ");
                 cadena = Console.ReadLine();
                 cantidad = Convert.ToSingle(cadena);
                 ListaCuentas[opcion].Ingresar(cantidad);
@@ -71,7 +54,7 @@ namespace AppGestionCuentas.ModificarCuenta
             esValido = ElegirModificar("la fecha de nacimiento");
             if (esValido == true)
             {
-                Console.Write("Escriba su nueva Fecha de Nacimiento: \n");
+                Console.Write("Escriba su nueva Fecha de Nacimiento: ");
                 cadena = Console.ReadLine();
                 FechaNac = Convert.ToDateTime(cadena);
                 ListaCuentas[opcion].FechaNacimiento = FechaNac;

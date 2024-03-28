@@ -53,26 +53,26 @@ namespace AppGestionCuentas.ACuentas
 
             string aux = "";
 
-            Console.Write("Escriba su nombre: ");
+            Console.Write("\nEscriba su nombre: ");
             nombre = Console.ReadLine();
 
             UIGeneral.Pausa();
 
-            Console.Write("Especifique el ingreso: ");
+            Console.Write("\nEspecifique el ingreso: ");
             aux = Console.ReadLine();
             ingreso = Convert.ToSingle(aux);
 
             UIGeneral.Pausa();
 
 
-            Console.Write("Escriba su fecha de nacimiento (AÑO,MES,DÍA): ");
+            Console.Write("\nEscriba su fecha de nacimiento (AÑO,MES,DÍA): ");
             aux = Console.ReadLine();
             FechaNacimiento = Convert.ToDateTime(aux);
 
             UIGeneral.Pausa();
 
 
-            Console.Write("Escriba su Nº Cuenta: ");
+            Console.Write("\nEscriba su Nº Cuenta: ");
             n_cuenta = Console.ReadLine();
 
             UIGeneral.Pausa();

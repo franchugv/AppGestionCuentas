@@ -20,7 +20,7 @@ namespace AppGestionCuentas.ACuentas
             Console.WriteLine("\t 1 - Cuenta Joven");
             Console.WriteLine("\t 2 - Cuenta Oro");
             Console.WriteLine("\t 3 - Cuenta Platino");
-            Console.WriteLine("\n\t\t Seleccione Tipo de Cuenta: ");
+            Console.Write("\n\t\t Seleccione Tipo de Cuenta: ");
 
         }
 

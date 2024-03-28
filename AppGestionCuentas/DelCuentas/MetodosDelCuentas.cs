@@ -15,8 +15,8 @@ namespace AppGestionCuentas.DelCuentas
             string aux = "";
             byte eleccion = 0;
 
-            aux = Console.ReadLine();
-            eleccion = Convert.ToByte(aux);
+           
+            eleccion = UIGeneral.SelectorOpcion();
 
 
             Cuentas.Remove(Cuentas[eleccion]);

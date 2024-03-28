@@ -12,6 +12,9 @@ namespace AppGestionCuentas.ACuentas
     {
         public static void MostrarMenuACuentas()
         {
+
+            Console.Clear();
+
             Console.WriteLine("\t\t MENÚ - Agregar Cuentas Bancarias");
             Console.WriteLine("\t 0 - Salir");
             Console.WriteLine("\t 1 - Cuenta Joven");

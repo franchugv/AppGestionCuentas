@@ -70,7 +70,7 @@ namespace AppGestionCuentas.GeneralTools
 
         public static void NumOpcionesLista(List<Cuenta> ListaCuenta)
         {
-            Console.WriteLine($"Nº de opciones a escoger: (0 - {ListaCuenta.ToArray().Length})\n");
+            Console.WriteLine($"Nº de opciones a escoger: ({ListaCuenta.ToArray().Length})\n");
         }
 
     }

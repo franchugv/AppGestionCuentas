@@ -2,6 +2,7 @@
 using AppGestionCuentas.ACuentas;
 using AppGestionCuentas.DelCuentas;
 using AppGestionCuentas.GeneralTools;
+using AppGestionCuentas.ModificarCuenta;
 using AppGestionCuentas.Principal;
 using R24_JesusCG_V1;
 using static System.Runtime.InteropServices.JavaScript.JSType;
@@ -22,7 +23,7 @@ namespace AppGestionCuentas
             do
             {
                 // RESET
-                esCorrecto = true; // Se consideraa que no habrá errores;
+                esCorrecto = true; // Se considera que no habrá errores;
 
                 UIPrincipal.MostrarMenu();
 
@@ -53,7 +54,7 @@ namespace AppGestionCuentas
                             break;
                         // Modificar Cuentas Bancarias
                         case MenuPrincipal.ModificarCuenta: // Modificar Cuentas                                                            
-                            // TODO: Llamada al subcontrolador - Modificar
+                            ControladorMCuenta.ControladorModificarCuentas(listaCuentas);
                             break;
 
 

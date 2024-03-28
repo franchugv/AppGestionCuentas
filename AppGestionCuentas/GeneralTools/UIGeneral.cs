@@ -66,12 +66,11 @@ namespace AppGestionCuentas.GeneralTools
         {
             Console.Write("Pulse Enter para continuar...");
             Console.ReadLine();
-            Console.Clear();
         }
 
-        public static void MostrarCuentas(List <Cuenta> ListaCuenta)
+        public static void NumOpcionesLista(List<Cuenta> ListaCuenta)
         {
-            Console.WriteLine(ListaCuenta);
+            Console.WriteLine($"Nº de opciones a escoger: (0 - {ListaCuenta.ToArray().Length})\n");
         }
 
     }

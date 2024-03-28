@@ -11,17 +11,16 @@ namespace AppGestionCuentas.DelCuentas
     public static class ControladorDelCuentas
     {
 
-        public static void ControladorDelCuenta(List <Cuenta> Lista)
+        public static void ControladorDelCuenta(List <Cuenta> ListaCuenta)
         {
-           
 
-            UIDelCuentas.MenuDelCuentas();
 
-            UIGeneral.MostrarCuentas(Lista);
+            UIDelCuentas.MenuDelCuentas(ListaCuenta);
 
-            MetodosDelCuentas.ElegirCuentaDel(Lista);
+            MetodosDelCuentas.ElegirCuentaDel(ListaCuenta);
 
-            UIGeneral.MostrarCuentas(Lista);
+            UIDelCuentas.MostrarFinalizarDel();
+
 
 
 

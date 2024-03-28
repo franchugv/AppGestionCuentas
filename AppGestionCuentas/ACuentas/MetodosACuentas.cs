@@ -65,7 +65,7 @@ namespace AppGestionCuentas.ACuentas
             UIGeneral.Pausa();
 
 
-            Console.Write("Escriba su fecha de nacimiento: ");
+            Console.Write("Escriba su fecha de nacimiento (AÑO,MES,DÍA): ");
             aux = Console.ReadLine();
             FechaNacimiento = Convert.ToDateTime(aux);
 

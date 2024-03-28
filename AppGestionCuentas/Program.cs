@@ -29,33 +29,40 @@ namespace AppGestionCuentas
                 // Ya no sirve: opcion = UIPrincipal.CaptarOpcion();
                 try
                 {
-                // Captación de ela opción de menú
+                // Captación de la opción de menú
                 opcion = (MenuPrincipal)GeneralTools.UIGeneral.CaptarOpcion((byte)Enum.GetValues<MenuPrincipal>
                     ().Length);
 
                     switch (opcion)
                     {
-                        case MenuPrincipal.Salir: // Salir
-                                                  // TODO: Confirmación del Usuario
+                        case MenuPrincipal.Salir: // Salir                                                  
                             break;
+
+
+
                         // Añadir Cuentas Bancarias
                         case MenuPrincipal.AgregarCuenta: // Añadir Cuentas
                             ControlACuentas.ControladorACuentas(listaCuentas);
+
+
                             break;
                         // Eliminar Cuentas Bancarias
                         case MenuPrincipal.EliminarCuenta: // Eliminar Cuentas
-                                                           // TODO: Llamada al subcontrolador - Eliminar
                             ControladorDelCuentas.ControladorDelCuenta(listaCuentas);
                             
                             break;
                         // Modificar Cuentas Bancarias
-                        case MenuPrincipal.ModificarCuenta: // Modificar Cuentas
-                                                            // TODO: Llamada al subcontrolador - Modificar
+                        case MenuPrincipal.ModificarCuenta: // Modificar Cuentas                                                            
+                            // TODO: Llamada al subcontrolador - Modificar
                             break;
+
+
                         // Consultar Cuentas Bancarias
                         case MenuPrincipal.ConsultarCuenta: // Consultar Cuentas
-                                                            // TODO: Llamada al subcontrolador - Consultar
+                            MostrarCuentas.ControladorMostrarCuenta.ControlMostrarCuenta(listaCuentas);
                             break;
+
+
                         case MenuPrincipal.CargarPrueba:    // Cargar lista datos prueba
                             CargarDatosPrueba(listaCuentas);
                             break;

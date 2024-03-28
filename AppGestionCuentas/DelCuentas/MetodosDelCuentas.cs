@@ -13,12 +13,11 @@ namespace AppGestionCuentas.DelCuentas
         public static void ElegirCuentaDel(List <Cuenta> Cuentas)
         {
             string aux = "";
-            byte eleccion;
+            byte eleccion = 0;
 
             aux = Console.ReadLine();
             eleccion = Convert.ToByte(aux);
 
-            UIGeneral.Pausa();
 
             Cuentas.Remove(Cuentas[eleccion]);
         }

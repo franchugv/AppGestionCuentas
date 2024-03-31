@@ -20,7 +20,6 @@ namespace AppGestionCuentas.ACuentas
             MenuACuentas opcion = MenuACuentas.Salir;
 
 
-            // TODO: Implementación del controlador para la adición de cuentas
             do
             {
                 UIACuentas.MostrarMenuACuentas();

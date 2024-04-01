@@ -11,6 +11,8 @@ namespace AppGestionCuentas.ACuentas
     public static class MetodosACuentas
     {
 
+        private static void CreearCuenta() { }
+
         public static void AgregarCuentaJoven(List<Cuenta> List) 
         {
             Cuenta NuevaCuenta;

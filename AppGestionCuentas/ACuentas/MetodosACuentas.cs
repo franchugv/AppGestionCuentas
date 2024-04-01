@@ -11,7 +11,7 @@ namespace AppGestionCuentas.ACuentas
     public static class MetodosACuentas
     {
 
-        private static void CreearCuenta() { }
+
 
         public static void AgregarCuentaJoven(List<Cuenta> List) 
         {
@@ -22,7 +22,6 @@ namespace AppGestionCuentas.ACuentas
             NuevaCuenta = new CuentaJoven(nombre, ingreso, FechaNacimiento, n_cuenta);
             List.Add(NuevaCuenta); // Agregar datos a la lista
         }
-
 
         public static void AgregarCuentaOro(List<Cuenta> List)
         {
@@ -45,7 +44,6 @@ namespace AppGestionCuentas.ACuentas
             NuevaCuenta = new CuentaPlatino(nombre, ingreso, FechaNacimiento, n_cuenta);
             List.Add(NuevaCuenta); // Agregar datos a la lista
         }
-
 
 
         // Menú
@@ -81,6 +79,8 @@ namespace AppGestionCuentas.ACuentas
 
 
         }
+
+
 
 
 

@@ -18,10 +18,13 @@ namespace AppGestionCuentas.ACuentas
         public static void ControladorACuentas(List<Cuenta> listaCuentas)
         {
             MenuACuentas opcion = MenuACuentas.Salir;
-
+            bool esValido;
+            string mError = "";
 
             do
             {
+                esValido = true;
+                try { 
                 UIACuentas.MostrarMenuACuentas();
 
                 opcion = (MenuACuentas)UIGeneral.CaptarOpcion((byte)(Enum.GetNames<MenuACuentas>().Length));
@@ -39,6 +42,21 @@ namespace AppGestionCuentas.ACuentas
                     case MenuACuentas.CuentaPlatino:
                         ACuentas.MetodosACuentas.AgregarCuentaPlatino(listaCuentas);
                         break;
+                }
+
+
+                }
+                catch(Exception error)
+                {
+                    esValido = false;
+                    mError = error.Message;
+                }
+                finally
+                {
+                    if (!esValido) 
+                    { 
+                    UIGeneral.MostrarError(mError);
+                    }
                 }
 
             } while (opcion != MenuACuentas.Salir);

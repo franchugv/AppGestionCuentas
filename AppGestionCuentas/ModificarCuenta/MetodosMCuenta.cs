@@ -60,6 +60,7 @@ namespace AppGestionCuentas.ModificarCuenta
                 ListaCuentas[opcion].FechaNacimiento = FechaNac;
             }
 
+            API_Fichero.ApiFichero.ModificarFichero(ListaCuentas[opcion]);
 
         }
 

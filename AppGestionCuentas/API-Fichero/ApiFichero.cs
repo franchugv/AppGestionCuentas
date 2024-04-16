@@ -11,14 +11,18 @@ namespace AppGestionCuentas.API_Fichero
     {
 
         
-        public static void CrearFichero(List<Cuenta> Lista, byte Cuenta)
+        public static void CrearFichero(Cuenta cuenta)
         {
 
             // Validar existencia de la cuenta
 
-            ValidarRepeticion(Lista[Cuenta].NumCuenta);
+            ValidarRepeticion(cuenta.NumCuenta);
 
-            StreamWriter Escritor = File.CreateText(Lista[Cuenta].NumCuenta);
+            StreamWriter Escritor = File.CreateText(cuenta.NumCuenta);
+
+            Escritor.WriteLine(cuenta.Titular);
+            Escritor.WriteLine(cuenta.Cantidad);
+            Escritor.WriteLine(cuenta.NumCuenta);
         }
 
         public static void ValidarRepeticion(string ncuenta)
@@ -26,6 +30,9 @@ namespace AppGestionCuentas.API_Fichero
             if (File.Exists(ncuenta)) throw new ApplicationException("Cuenta ya existente");
         }
 
-
+        internal static void ModificarFichero(Cuenta cuenta)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

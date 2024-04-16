@@ -13,6 +13,12 @@ namespace AppGestionCuentas
     {
         static void Main(string[] args)
         {
+            ControladorPrincipal();
+
+        }
+
+        public static void ControladorPrincipal()
+        {
             // RECURSOS APLICACIÓN
 
             List<Cuenta> listaCuentas = new List<Cuenta>();
@@ -30,9 +36,9 @@ namespace AppGestionCuentas
                 // Ya no sirve: opcion = UIPrincipal.CaptarOpcion();
                 try
                 {
-                // Captación de la opción de menú
-                opcion = (MenuPrincipal)GeneralTools.UIGeneral.CaptarOpcion((byte)Enum.GetValues<MenuPrincipal>
-                    ().Length);
+                    // Captación de la opción de menú
+                    opcion = (MenuPrincipal)GeneralTools.UIGeneral.CaptarOpcion((byte)Enum.GetValues<MenuPrincipal>
+                        ().Length);
 
                     switch (opcion)
                     {
@@ -50,7 +56,7 @@ namespace AppGestionCuentas
                         // Eliminar Cuentas Bancarias
                         case MenuPrincipal.EliminarCuenta: // Eliminar Cuentas
                             ControladorDelCuentas.ControladorDelCuenta(listaCuentas);
-                            
+
                             break;
                         // Modificar Cuentas Bancarias
                         case MenuPrincipal.ModificarCuenta: // Modificar Cuentas                                                            
@@ -69,7 +75,7 @@ namespace AppGestionCuentas
                             break;
                     }
                 }
-                catch (ArgumentException error) 
+                catch (ArgumentException error)
                 {
                     esCorrecto = false;
                     MensajeError = "No ha introducido ninguna opción";
@@ -98,13 +104,9 @@ namespace AppGestionCuentas
 
             } while (opcion != MenuPrincipal.Salir || !esCorrecto);
 
- // o también while !(opcion == MenuPrincipal.salir && esCorrecto)
+            // o también while !(opcion == MenuPrincipal.salir && esCorrecto)
 
             // Menú Principal
-
-
-            
-
         }
 
         private static void CargarDatosPrueba(List<Cuenta> lista)
